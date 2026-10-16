@@ -2,7 +2,7 @@
 Students simulate the interaction between a browser, server, and database to understand how requests are processed and responses are returned.
 
 # Solution
-# Activity 1: How the Internet Works
+
 
 Aim: To understand how a browser communicates with a server and database to process a request and return a response.
 
