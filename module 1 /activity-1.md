@@ -3,163 +3,89 @@ Students simulate the interaction between a browser, server, and database to und
 
 # Solution
 
+# Activity 1: How the Internet Works
 
-Aim: To understand how a browser communicates with a server and database to process a request and return a response.
+Aim: To understand how a browser, web server, and database communicate to process requests and return responses.
 
-Example: A student opens a college website and views their results.
+## 1. Flowchart
 
-### Flowchart
+START
 
-Start
+1\. Browser
 
-Browser
+User enters a website URL or requests information
 
-Student requests results
+2\. HTTP/HTTPS Request
 
-Web Server / Backend
+Browser sends the request over the internet
+
+3\. Web Server / Backend
 
 Receives and processes the request
 
-Database
+4\. Database
 
-Retrieves the student's result
+Retrieves the requested information
 
-Server sends the response
+5\. Server Response
 
-Browser displays the result
+Server receives data from the database and prepares a response
 
-End
+6\. Browser Displays the Result
 
-### Explanation
-
-1. The user enters a website URL in the browser.
-2. The browser sends an HTTP or HTTPS request to the server.
-3. The backend processes the request.
-4. The server queries the database for the required information.
-5. The database returns the result to the server.
-6. The server sends an HTTP response to the browser.
-7. The browser displays the result.
-
-Result: Students understand how a browser, server, and database work together to deliver website content.
-
-# Activity 2: Logic Building Challenge
-
-Aim: To solve logical problems using flowcharts and pseudocode before writing a program.
-
-Problem: Find whether a given number is even or odd.
-
-### Flowchart
-
-Start
-
-Input number `N`
-
-Is N % 2 = 0?
-
-Yes
-
-Print Even
-
-End
-
-No
-
-Print Odd
-
-End
-
-### Pseudocode
-
-```
-START
-INPUT N
-
-IF N MOD 2 = 0 THEN
-    PRINT "Even"
-ELSE
-    PRINT "Odd"
-END IF
+The requested webpage or information appears on the screen
 
 STOP
-```
 
-### Python implementation
+## 2. Example scenario
+
+A student wants to view their exam results on a college website.
+
+1. Browser: The student opens the college website and clicks “View Results.”
+2. Request: The browser sends a request to the web server.
+3. Server: The backend receives the request and checks the student's identity and permissions.
+4. Database: The server retrieves the student's marks from the database.
+5. Response: The server sends the result back to the browser.
+6. Display: The browser displays the marks on the screen.
+
+## 3. Simulation activity
+
+Students can act out the roles of the different components.
+
+| Participant | Role       | Action                |
+| ----------- | ---------- | --------------------- |
+| Student     | User       | Requests exam results |
+| Student 1   | Browser    | Sends the request     |
+| Student 2   | Web server | Processes the request |
+| Student 3   | Database   | Finds the exam marks  |
+| Student 1   | Browser    | Displays the response |
+
+Simulation example:
+
+- Browser: “I need the student's exam result.”
+- Server: “I will request the result from the database.”
+- Database: “The student's mark is 85.”
+- Server: “Here is the result.”
+- Browser: “Your mark is 85.”
+
+## 4. Basic Python simulation
 
 ```
-n = int(input("Enter a number: "))if n % 2 == 0:    print("Even number")else:    print("Odd number")
+# Browserprint("Browser: Requesting student result...")# Serverprint("Server: Processing request...")# Databasedatabase = {    "Nila": 85,    "Arun": 90}name = input("Enter student name: ")# Server retrieves data from the databaseif name in database:    result = database[name]    print("Server: Sending response...")    # Browser displays response    print("Browser: Student mark =", result)else:    print("Browser: Student record not found.")
 ```
 
 Example output:
 
 ```
-Enter a number: 7
-Odd number
+Browser: Requesting student result...
+Server: Processing request...
+Enter student name: Nila
+Server: Sending response...
+Browser: Student mark = 85
 ```
 
-Result: Students learn to analyze a problem, create a flowchart, write pseudocode, and convert the logic into executable code.
+Note: This is a simplified simulation. The Python dictionary represents a database, and the program simulates request processing without an actual internet connection.
 
-Other challenges can include finding the largest of three numbers, calculating factorials, and checking whether a number is prime.
+## 5. Result
 
-# Activity 3: Real-world Scenario Mapping
-
-Aim: To identify frontend, backend, and database components in everyday applications.
-
-Example: An online shopping application.
-
-[Ecommerce Mobile App - UI UX Design by Tariqul islam on Dribbble](https://images.openai.com/static-rsc-4/g5EEynZbpjgDJCKqrZslFxagux9KTPnYY8cpxV4OpgLSDP8bBJQTiit6Ww8QlInQGdBdwDSp2fowzytnJ94iKFWEIIYMVeLPHNvUhyHzYcO-aTP4WXwuWYOXS4qcIIyYIrlGmwnW3IjF4LIzflUb12f1p5q5XmNQ6mpjowinuHM?purpose=inline)
-
-[dribbble.com](https://dribbble.com/shots/22047333-Ecommerce-Mobile-App-UI-UX-Design?utm_source=chatgpt.com)
-
-### Flowchart
-
-User
-
-Searches for a product
-
-Frontend
-
-HTML, CSS, JavaScript, React
-
-Displays products and the shopping cart
-
-Backend
-
-Processes requests and business logic
-
-Checks product availability and orders
-
-Database
-
-Stores products, prices, users, and orders
-
-Backend returns the data
-
-Frontend displays products to the user
-
-### Component mapping
-
-| Component | Purpose                             | Examples                   |
-| --------- | ----------------------------------- | -------------------------- |
-| Frontend  | User interface                      | HTML, CSS, React           |
-| Backend   | Handles requests and business logic | Node.js, Express           |
-| Database  | Stores and retrieves information    | MySQL, PostgreSQL, MongoDB |
-
-### Other real-world examples
-
-| Application    | Frontend                        | Backend function                           | Database information         |
-| -------------- | ------------------------------- | ------------------------------------------ | ---------------------------- |
-| WhatsApp       | Chats and messages UI           | Sends and receives messages                | Messages and account data    |
-| YouTube        | Video player and search UI      | Finds videos and manages playback requests | Video metadata and user data |
-| Banking app    | Balance and transaction screens | Processes authorized banking requests      | Accounts and transactions    |
-| College portal | Student dashboard               | Handles marks and attendance requests      | Student records and results  |
-
-Result: Students understand how frontend, backend, and database components work together to build real-world applications.
-
-## Final conclusion
-
-These three activities demonstrate the basic principles of web development:
-
-- Activity 1: How data travels between a browser, server, and database.
-- Activity 2: How to solve problems using logical thinking, flowcharts, and pseudocode.
-- Activity 3: How real-world applications use frontend, backend, and database components together.
-
+Students understand how a browser sends requests, how a server processes them, how a database provides information, and how the browser displays the returned response.
